@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-bar {
+    white-space: nowrap;
+    overflow: auto;
+    background-color: #000000;
+    border-bottom: solid 4px orange;
+}
+
+.menu-bar a {
+    display: inline-block;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.menu-bar a:hover {
+    color: black;
+    background-color: white;
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    background-color: black;
+    border-top: solid 5px greenyellow;
+}
+
+.content-body {
+    box-sizing: border-box;
+    border: grey 5px groove;
+    position: absolute;
+    bottom: 65px;
+    top: 50px;
+    width: 100%;
+}
+
+.content-body iframe {
+}

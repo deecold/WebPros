@@ -1,0 +1,11 @@
+.code {
+    padding: 10px;
+    color: wheat;
+    font-size: 14px;
+    background-color: grey;
+}
+
+.capture > legend {
+    font: bolder 22px "Songti TC";
+    color: red;
+}
