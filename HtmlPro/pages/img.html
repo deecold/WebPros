@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图像知识</title>
+    <link rel="stylesheet" href="../styles/beautiful.css">
+    <style>
+        img {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: solid 2px orange;
+            border-radius: 2px;
+            outline: solid 1px skyblue;
+            outline-offset: 1px;
+        }
+    </style>
+</head>
+<body>
+<fieldset class="capture">
+    <legend>图像插入方式</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <h3>本地插入</h3>
+                <img src="../images/yyy.png" alt="yyy">
+                <h3>网络插入</h3>
+                <img src="https://avatars2.githubusercontent.com/u/34497722?s=40&v=4" alt="yyy">
+            </xmp>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>效果</legend>
+        <div>
+            <h3>本地插入</h3>
+            <img src="../images/yyy.png" alt="yyy">
+            <h3>网络插入</h3>
+            <img src="https://avatars2.githubusercontent.com/u/34497722?s=40&v=4" alt="yyy">
+        </div>
+    </fieldset>
+</fieldset>
+
+
+<fieldset class="capture">
+    <legend>排列图片</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <div>
+                    <p>
+                        this is default image
+                        <img src="../images/yyy.png" alt="yyy">
+                        this is default image
+                    </p>
+                    <p>
+                        this is top image
+                        <img src="../images/yyy.png" alt="yyy" style="vertical-align: top">
+                        this is top image
+                    </p>
+                    <p>
+                        this is middle image
+                        <img src="../images/yyy.png" alt="yyy" style="vertical-align: middle">
+                        this is middle image
+                    </p>
+                    <p>
+                        this is bottom image
+                        <img src="../images/yyy.png" alt="yyy" style="vertical-align: bottom">
+                        this is bottom image
+                    </p>
+
+                    <p>
+                        this is baseline image
+                        <img src="../images/yyy.png" alt="yyy" style="vertical-align: baseline">
+                        this is baseline image
+                    </p>
+
+
+                </div>
+            </xmp>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>运行效果</legend>
+        <div>
+            <p>
+                this is default image
+                <img src="../images/yyy.png" alt="yyy">
+                this is default image
+            </p>
+            <p>
+                this is top image
+                <img src="../images/yyy.png" alt="yyy" style="vertical-align: top">
+                this is top image
+            </p>
+            <p>
+                this is middle image
+                <img src="../images/yyy.png" alt="yyy" style="vertical-align: middle">
+                this is middle image
+            </p>
+            <p>
+                this is bottom image
+                <img src="../images/yyy.png" alt="yyy" style="vertical-align: bottom">
+                this is bottom image
+            </p>
+
+            <p>
+                this is baseline image
+                <img src="../images/yyy.png" alt="yyy" style="vertical-align: baseline">
+                this is baseline image
+            </p>
+
+
+        </div>
+    </fieldset>
+
+</fieldset>
+
+
+<fieldset class="capture">
+    <legend>图片链接</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <a href="http://www.baidu.com" title="百度">
+                    <img src="../images/yyy.png" alt="yyy">
+                </a>
+            </xmp>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>运行效果</legend>
+        <div>
+            <a href="http://www.baidu.com" title="百度">
+                <img src="../images/yyy.png" alt="yyy">
+            </a>
+        </div>
+    </fieldset>
+
+</fieldset>
+
+<fieldset class="capture">
+    <legend>浮动图片</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <div style="clear: both">
+                    <div style="height: 200px;width: 400px;padding: 20px;float: left">
+                        this is some text!!!this is some text!!!this is some text!!!
+                        this is some text!!!this is some text!!!this is some text!!!
+                        <img src="../images/yyy.png" alt="yyy" style="float: left">
+                        this is some text!!!this is some text!!!this is some text!!!
+                        this is some text!!!this is some text!!!this is some text!!!
+                        this is some text!!!this is some text!!!this is some text!!!
+                        this is some text!!!this is some text!!!this is some text!!!
+                        this is some text!!!this is some text!!!this is some text!!!
+                    </div>
+                    <div style="height: 200px;width: 400px;padding: 20px;float: left;margin-left: 50px">
+                        this is some text!!!this is some text!!!this is some text!!!
+                        this is some text!!!this is some text!!!this is some text!!!
+                        <img src="../images/yyy.png" alt="yyy" style="float: right">
+                        this is some text!!!this is some text!!!this is some text!!!
+                        this is some text!!!this is some text!!!this is some text!!!
+                        this is some text!!!this is some text!!!this is some text!!!
+                        this is some text!!!this is some text!!!this is some text!!!
+                        this is some text!!!this is some text!!!this is some text!!!
+                    </div>
+                </div>
+            </xmp>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>运行效果</legend>
+        <div style="clear: both">
+            <div style="height: 200px;width: 400px;padding: 20px;float: left">
+                this is some text!!!this is some text!!!this is some text!!!
+                this is some text!!!this is some text!!!this is some text!!!
+                <img src="../images/yyy.png" alt="yyy" style="float: left">
+                this is some text!!!this is some text!!!this is some text!!!
+                this is some text!!!this is some text!!!this is some text!!!
+                this is some text!!!this is some text!!!this is some text!!!
+                this is some text!!!this is some text!!!this is some text!!!
+                this is some text!!!this is some text!!!this is some text!!!
+            </div>
+            <div style="height: 200px;width: 400px;padding: 20px;float: left;margin-left: 50px">
+                this is some text!!!this is some text!!!this is some text!!!
+                this is some text!!!this is some text!!!this is some text!!!
+                <img src="../images/yyy.png" alt="yyy" style="float: right">
+                this is some text!!!this is some text!!!this is some text!!!
+                this is some text!!!this is some text!!!this is some text!!!
+                this is some text!!!this is some text!!!this is some text!!!
+                this is some text!!!this is some text!!!this is some text!!!
+                this is some text!!!this is some text!!!this is some text!!!
+            </div>
+        </div>
+    </fieldset>
+
+</fieldset>
+
+
+<fieldset class="capture">
+    <legend>图片映射</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <img src="../images/yyy.png" alt="yyy" usemap="#map2">
+                <map name="map2">
+                    <area shape="rect" coords="0,0,50,100" href="http://www.baidu.com" title="百度">
+                    <area shape="circle" coords="75,25,25" href="http://www.sina.com.cn" title="新浪">
+                    <area shape="circle" coords="75,75,25" href="http://www.163.com" title="网易">
+                </map>
+            </xmp>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>运行效果</legend>
+        <div>
+            <img src="../images/yyy.png" alt="yyy" usemap="#map1">
+            <map name="map1">
+                <area shape="rect" coords="0,0,50,100" href="http://www.baidu.com" title="百度">
+                <area shape="circle" coords="75,25,25" href="http://www.sina.com.cn" title="新浪">
+                <area shape="circle" coords="75,75,25" href="http://www.163.com" title="网易">
+            </map>
+        </div>
+    </fieldset>
+
+</fieldset>
+
+</body>
+</html>
