@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../styles/beautiful.css">
+</head>
+<body>
+<fieldset class="capture">
+    <legend>表单例子</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <form id="frmLogin1" name="frmLogin" method="post" action="form.html">
+
+                    <label for="txt-name">名称:</label>
+                    <input type="text" id="txt-name" name="txt-name" placeholder="please input your name">
+                    <br>
+
+                    <label for="txt-pwd">密码:</label>
+                    <input type="password" id="txt-pwd" name="txt-pwd" placeholder="please input your pass">
+                    <br>
+
+                    <label>性别:</label>
+                    <input type="radio" id="radio-male1" name="sex" checked>
+                    <label for="radio-male">男</label>
+                    <input type="radio" id="radio-female1" name="sex">
+                    <label for="radio-female">女</label>
+                    <br>
+
+                    <label>爱好:</label>
+                    <input type="checkbox" id="chk-basket1" name="fav">
+                    <label for="chk-basket">篮球</label>
+
+                    <input type="checkbox" id="chk-foot1" name="fav" checked>
+                    <label for="chk-foot">足球</label>
+
+                    <input type="checkbox" id="chk-swim1" name="fav">
+                    <label for="chk-swim">游泳</label>
+
+                    <br>
+
+                    <label for="sele-province">请选择省份:</label>
+                    <select name="sele-province" id="sele-province1">
+                        <option value="bj" selected>北京市</option>
+                        <option value="tj">天津市</option>
+                        <option value="sh">上海市</option>
+                        <option value="cq">重庆市</option>
+                    </select>
+                    <br>
+
+
+                    <fieldset>
+                        <legend>自我描述</legend>
+                        <textarea name="txt-descript" id="txt-descript1" cols="30" rows="10"></textarea>
+                    </fieldset>
+                    <br>
+
+                    <input type="submit" value="提交">
+
+                </form>
+            </xmp>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>运行效果</legend>
+        <div>
+            <form id="frmLogin" name="frmLogin" method="post" action="form.html">
+
+                <label for="txtName">名称:</label>
+                <input type="text" id="txtName" name="txtName" placeholder="please input your name">
+                <br>
+
+                <label for="txtPwd">密码:</label>
+                <input type="password" id="txtPwd" name="txtPwd" placeholder="please input your pass">
+                <br>
+
+                <label>性别:</label>
+                <input type="radio" id="radio-male" name="sex" checked>
+                <label for="radio-male">男</label>
+                <input type="radio" id="radio-female" name="sex">
+                <label for="radio-female">女</label>
+                <br>
+
+                <label>爱好:</label>
+                <input type="checkbox" id="chk-basket" name="fav">
+                <label for="chk-basket">篮球</label>
+
+                <input type="checkbox" id="chk-foot" name="fav" checked>
+                <label for="chk-foot">足球</label>
+
+                <input type="checkbox" id="chk-swim" name="fav">
+                <label for="chk-swim">游泳</label>
+
+                <br>
+
+                <label for="sele-province">请选择省份:</label>
+                <select name="sele-province" id="sele-province">
+                    <option value="bj" selected>北京市</option>
+                    <option value="tj">天津市</option>
+                    <option value="sh">上海市</option>
+                    <option value="cq">重庆市</option>
+                </select>
+                <br>
+
+
+                <fieldset>
+                    <legend>自我描述</legend>
+                    <textarea name="txt-descript" id="txt-descript" cols="30" rows="10"></textarea>
+                </fieldset>
+                <br>
+
+                <input type="submit" value="提交">
+
+            </form>
+        </div>
+    </fieldset>
+
+</fieldset>
+</body>
+</html>
