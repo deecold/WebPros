@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>链接</title>
+    <link rel="stylesheet" href="../styles/beautiful.css">
+</head>
+<body>
+<fieldset class="capture">
+    <legend>普通链接</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <a href="http://www.baidu.com">百度一下，默认设置</a> <br>
+                <a href="http://www.baidu.com" target="_blank">百度一下，新标签页打开</a><br>
+                <a href="http://www.baidu.com" target="_top">百度一下，顶级标签页打开</a><br>
+                <a href="http://www.baidu.com" target="_self">百度一下，自己框架打开(默认)</a><br>
+                <a href="http://www.baidu.com" target="_parent">百度一下，父框架打开</a>
+            </xmp>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>运行效果</legend>
+        <div>
+            <a href="http://www.baidu.com">百度一下，默认设置</a> <br>
+            <a href="http://www.baidu.com" target="_blank">百度一下，新标签页打开</a><br>
+            <a href="http://www.baidu.com" target="_top">百度一下，顶级标签页打开</a><br>
+            <a href="http://www.baidu.com" target="_self">百度一下，自己框架打开</a><br>
+            <a href="http://www.baidu.com" target="_parent">百度一下，父框架打开</a>
+        </div>
+    </fieldset>
+</fieldset>
+
+<fieldset class="capture">
+    <legend>图像作为链接</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <a href="http://www.baidu.com">
+                    <img src="../images/yyy.png" alt="baiduyixia" style="height: 100px;width: 100px">
+                </a>
+            </xmp>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>运行效果</legend>
+        <div>
+            <a href="http://www.baidu.com">
+                <img src="../images/yyy.png" alt="baiduyixia" style="height: 100px;width: 100px">
+            </a>
+        </div>
+    </fieldset>
+</fieldset>
+
+<fieldset class="capture">
+    <legend>同一个页面的不同位置</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <div style="height: 400px;overflow: scroll;position: relative">
+                    <span id="nav0"></span>
+                    <a href="#nav1">位置一</a>
+                    <a href="#nav2">位置二</a>
+                    <a href="#nav3">位置三</a>
+                    <a href="#nav4">位置四</a>
+                    <div id="nav1" style="height: 300px;background: red">
+                        <a href="#nav0"
+                           style="position:relative;left: 10px;top: 20px;padding: 12px 16px;background: slateblue;color: whitesmoke;text-decoration: none">回到顶部</a>
+                    </div>
+                    <div id="nav2" style="height: 300px;background: green">
+                        <a href="#nav0"
+                           style="position:relative;left: 10px;top: 20px;padding: 12px 16px;background: slateblue;color: whitesmoke;text-decoration: none">回到顶部</a>
+                    </div>
+                    <div id="nav3" style="height: 300px;background: blue">
+                        <a href="#nav0"
+                           style="position:relative;left: 10px;top: 20px;padding: 12px 16px;background: slateblue;color: whitesmoke;text-decoration: none">回到顶部</a>
+                    </div>
+                    <div id="nav4" style="height: 300px;background: yellowgreen">
+                        <a href="#nav0"
+                           style="position:relative;left: 10px;top: 20px;padding: 12px 16px;background: slateblue;color: whitesmoke;text-decoration: none">回到顶部</a>
+                    </div>
+                </div>
+            </xmp>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>运行效果</legend>
+        <div style="height: 400px;overflow: scroll;position: relative">
+            <span id="nav0"></span>
+            <a href="#nav1">位置一</a>
+            <a href="#nav2">位置二</a>
+            <a href="#nav3">位置三</a>
+            <a href="#nav4">位置四</a>
+            <div id="nav1" style="height: 300px;background: red">
+                <a href="#nav0"
+                   style="position:relative;left: 10px;top: 20px;padding: 12px 16px;background: slateblue;color: whitesmoke;text-decoration: none">回到顶部</a>
+            </div>
+            <div id="nav2" style="height: 300px;background: green">
+                <a href="#nav0"
+                   style="position:relative;left: 10px;top: 20px;padding: 12px 16px;background: slateblue;color: whitesmoke;text-decoration: none">回到顶部</a>
+            </div>
+            <div id="nav3" style="height: 300px;background: blue">
+                <a href="#nav0"
+                   style="position:relative;left: 10px;top: 20px;padding: 12px 16px;background: slateblue;color: whitesmoke;text-decoration: none">回到顶部</a>
+            </div>
+            <div id="nav4" style="height: 300px;background: yellowgreen">
+                <a href="#nav0"
+                   style="position:relative;left: 10px;top: 20px;padding: 12px 16px;background: slateblue;color: whitesmoke;text-decoration: none">回到顶部</a>
+            </div>
+        </div>
+    </fieldset>
+</fieldset>
+
+<fieldset class="capture">
+    <legend>电子邮件</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <a href="mailto:dee@dee.com">发送邮件给dee</a>
+            </xmp>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>效果</legend>
+        <div>
+            <a href="mailto:dee@dee.com">发送邮件给dee</a>
+        </div>
+    </fieldset>
+</fieldset>
+
+</body>
+</html>
