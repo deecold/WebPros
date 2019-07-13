@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../styles/beautiful.css">
+    <style>
+        canvas {
+            border: solid 1px orange;
+        }
+    </style>
+</head>
+<body>
+<fieldset class="capture">
+    <legend>canvas-路径</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <div>
+                    <canvas id="canvas1_1" width="200" height="200"></canvas>
+                </div>
+                <script>
+                    var canvas1 = document.querySelector('#canvas1_1');
+                    var context1 = canvas1.getContext('2d');
+                    context1.strokeStyle = 'red';
+                    context1.lineWidth = 16;
+                    context1.beginPath();
+                    context1.moveTo(10, 10);
+                    context1.lineTo(190, 190);
+                    context1.stroke();
+                </script>
+            </xmp>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>运行效果</legend>
+        <div>
+            <canvas id="canvas1" width="200" height="200"></canvas>
+        </div>
+        <script>
+            var canvas1 = document.querySelector('#canvas1');
+            var context1 = canvas1.getContext('2d');
+            context1.strokeStyle = 'red';
+            context1.lineWidth = 16;
+            context1.beginPath();
+            context1.moveTo(10, 10);
+            context1.lineTo(190, 190);
+            context1.stroke();
+
+        </script>
+    </fieldset>
+
+</fieldset>
+<fieldset class="capture">
+    <legend>canvas-圆(弧)</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <div>
+                    <canvas id="canvas2_1" width="200" height="200"></canvas>
+                </div>
+                <script>
+                    var canvas2 = document.querySelector('#canvas2_2');
+                    var context2 = canvas2.getContext('2d');
+                    context2.strokeStyle = 'red';
+                    context2.lineWidth = 6;
+                    context2.beginPath();
+                    context2.arc(100, 100, 60, 0, 2 * Math.PI);
+                    context2.stroke();
+
+                </script>
+            </xmp>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>运行效果</legend>
+        <div>
+            <canvas id="canvas2" width="200" height="200"></canvas>
+        </div>
+        <script>
+            var canvas2 = document.querySelector('#canvas2');
+            var context2 = canvas2.getContext('2d');
+            context2.strokeStyle = 'red';
+            context2.lineWidth = 6;
+            context2.beginPath();
+            context2.arc(100, 100, 60, 0, 2 * Math.PI);
+            context2.stroke();
+
+        </script>
+    </fieldset>
+
+</fieldset>
+
+
+<fieldset class="capture">
+    <legend>文本</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <div>
+                    <canvas id="canvas3_1" width="200" height="200"></canvas>
+                </div>
+                <script>
+                    var canvas3 = document.querySelector('#canvas3_1');
+                    var context3 = canvas3.getContext('2d');
+                    context3.strokeStyle = 'red';
+                    context3.fillStyle = 'blue';
+                    // context3.lineWidth = 6;
+                    context3.font = '30px Arial';
+                    context3.beginPath();
+
+                    context3.strokeText("Hello World", 0, 100);
+                    context3.stroke();
+
+                    context3.fillText('Hello World', 2, 102);
+                    context3.fill();
+
+
+                </script>
+            </xmp>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>运行效果</legend>
+        <div>
+            <canvas id="canvas3" width="200" height="200"></canvas>
+        </div>
+        <script>
+            var canvas3 = document.querySelector('#canvas3');
+            var context3 = canvas3.getContext('2d');
+            context3.strokeStyle = 'red';
+            context3.fillStyle = 'blue';
+            // context3.lineWidth = 6;
+            context3.font = '30px Arial';
+            context3.beginPath();
+
+            context3.strokeText("Hello World", 0, 100);
+            context3.stroke();
+
+            context3.fillText('Hello World', 2, 102);
+            context3.fill();
+
+
+        </script>
+    </fieldset>
+
+</fieldset>
+
+
+<fieldset class="capture">
+    <legend>Canvas-渐变-线性</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <div>
+                    <canvas id="canvas5-1" width="200" height="200"></canvas>
+                </div>
+                <script>
+                    var canvas5 = document.querySelector('#canvas5-1');
+                    var context5 = canvas5.getContext('2d');
+                    var liearGrd = context5.createLinearGradient(0, 0, 200, 0);
+                    liearGrd.addColorStop(0, 'red');
+                    liearGrd.addColorStop(0.5, 'green');
+                    liearGrd.addColorStop(1, 'blue');
+                    context5.fillStyle = liearGrd;
+
+                    context5.beginPath();
+                    context5.fillRect(0, 0, 200, 200);
+                    context5.fill();
+
+                </script>
+            </xmp>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>运行效果</legend>
+        <div>
+            <canvas id="canvas5" width="200" height="200"></canvas>
+        </div>
+        <script>
+            var canvas5 = document.querySelector('#canvas5');
+            var context5 = canvas5.getContext('2d')
+
+            var liearGrd = context5.createLinearGradient(0, 0, 200, 0);
+            liearGrd.addColorStop(0, 'red');
+            liearGrd.addColorStop(0.5, 'green');
+            liearGrd.addColorStop(1, 'blue');
+
+            context5.fillStyle = liearGrd;
+            context5.fillRect(0, 0, 200, 200);
+            context5.fill();
+
+        </script>
+
+    </fieldset>
+
+</fieldset>
+
+
+<fieldset class="capture">
+    <legend>Canvas-渐变-圆性</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <div>
+                    <canvas id="canvas6-1" width="200" height="200"></canvas>
+                </div>
+                <script>
+                    var canvas6 = document.querySelector('#canvas6-1');
+                    var context6 = canvas6.getContext('2d');
+                    var liearGrd = context6.createLinearGradient(0, 0, 200, 0);
+                    liearGrd.addColorStop(0, 'red');
+                    liearGrd.addColorStop(0.6, 'green');
+                    liearGrd.addColorStop(1, 'blue');
+                    context6.fillStyle = liearGrd;
+
+                    context6.beginPath();
+                    context6.fillRect(0, 0, 200, 200);
+                    context6.fill();
+
+                </script>
+            </xmp>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>运行效果</legend>
+        <div>
+            <canvas id="canvas6" width="200" height="200"></canvas>
+        </div>
+        <script>
+            var canvas6 = document.querySelector('#canvas6');
+            var context6 = canvas6.getContext('2d')
+
+            var grd = context6.createRadialGradient(100,100,10,100,100,60);
+            grd.addColorStop(0, 'red');
+            grd.addColorStop(0.6, 'green');
+            grd.addColorStop(1, 'blue');
+
+            context6.fillStyle = grd;
+            context6.fillRect(0, 0, 200, 200);
+            context6.fill();
+
+        </script>
+
+    </fieldset>
+
+</fieldset>
+
+
+
+</body>
+</html>
