@@ -262,5 +262,311 @@
 
 </fieldset>
 
+<fieldset class="capture">
+    <legend>路径</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <svg width="300" height="300">
+                    <path d="M150,0 L75,200 L225,200 Z" fill="red"></path>
+                </svg>
+            </xmp>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>运行效果</legend>
+        <div>
+            <svg width="300" height="300">
+                <path d="M150,0 L75,200 L225,200 Z" fill="red"></path>
+            </svg>
+        </div>
+    </fieldset>
+
+</fieldset>
+
+
+<fieldset class="capture">
+    <legend>Svg路径</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <svg width="500" height="500" style="background-color: beige;opacity: 1">
+                    <path id="lineAB" d="M100 350 l150 -300" stroke-width="3" stroke="red" fill="none"></path>
+                    <path id="lineBC" d="M250 50 l150 300" stroke-width="3" stroke="red" fill="none"></path>
+                    <path d="M175 200 l 150 0 " stroke="green" stroke-width="3" fill="none"></path>
+                    <path d="M 100 350 q 150 -300 300 0" stroke="yellow" stroke-width="5" fill="none"></path>
+                    <!--<path d="M 100 350 q 150 -300 300 0" stroke="blue" stroke-width="5" fill="none" />-->
+                    <g stroke="black" stroke-width="3" fill="black">
+                        <circle r="3" cx="100" cy="350"></circle>
+                        <circle r="3" cx="250" cy="50"></circle>
+                        <circle r="3" cx="400" cy="350"></circle>
+                    </g>
+                    <g font-size="30" font="sans-serif" fill="black" stroke="none" text-anchor="middle">
+                        <text x="100" y="350" dx="-50">A</text>
+                        <text x="250" y="50" dy="-10">B</text>
+                        <text x="400" y="350" dx="50">C</text>
+                    </g>
+                </svg>
+            </xmp>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>运行效果</legend>
+        <div>
+            <svg width="500" height="500" style="background-color: beige;opacity: 1">
+                <path id="lineAB" d="M100 350 l150 -300" stroke-width="3" stroke="red" fill="none"></path>
+                <path id="lineBC" d="M250 50 l150 300" stroke-width="3" stroke="red" fill="none"></path>
+                <path d="M175 200 l 150 0 " stroke="green" stroke-width="3" fill="none"></path>
+                <path d="M 100 350 q 150 -300 300 0" stroke="yellow" stroke-width="5" fill="none"></path>
+                <!--<path d="M 100 350 q 150 -300 300 0" stroke="blue" stroke-width="5" fill="none" />-->
+                <g stroke="black" stroke-width="3" fill="black">
+                    <circle r="3" cx="100" cy="350"></circle>
+                    <circle r="3" cx="250" cy="50"></circle>
+                    <circle r="3" cx="400" cy="350"></circle>
+                </g>
+                <g font-size="30" font="sans-serif" fill="black" stroke="none" text-anchor="middle">
+                    <text x="100" y="350" dx="-50">A</text>
+                    <text x="250" y="50" dy="-10">B</text>
+                    <text x="400" y="350" dx="50">C</text>
+                </g>
+            </svg>
+        </div>
+    </fieldset>
+
+</fieldset>
+
+<fieldset class="capture">
+    <legend>文本</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <svg width="300" height="300" style="background: grey">
+                    <defs>
+                        <path id="path1" d="M10,100 a1,1 0 0,0 100,0"></path>
+                    </defs>
+                    <text x="0" y="15" fill="red">i love svg</text>
+                    <text x="0" y="50" fill="red" transform="rotate(45 0,50)">i love svg</text>
+                    <text x="10" y="100" fill="red">
+                        <textPath xlink:href="#path1">I love SVG I love SVG</textPath>
+                    </text>
+
+                    <text x="10" y="120" style="fill:red;">Several lines:
+                        <tspan x="10" y="145">First line</tspan>
+                        <tspan x="10" y="170">Second line</tspan>
+                    </text>
+
+                    <a href="http://www.baidu.com" target="_blank">
+                        <text x="100" y="250" fill="red">I love SVG</text>
+                    </a>
+                </svg>
+            </xmp>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>运行效果</legend>
+        <div>
+            <svg width="300" height="300" style="background: grey">
+                <defs>
+                    <path id="path1" d="M10,100 a1,1 0 0,0 100,0"></path>
+                </defs>
+                <text x="0" y="15" fill="red">i love svg</text>
+                <text x="0" y="50" fill="red" transform="rotate(45 0,50)">i love svg</text>
+                <text x="10" y="100" fill="red">
+                    <textPath xlink:href="#path1">I love SVG I love SVG</textPath>
+                </text>
+                <text x="10" y="180" style="fill:red;">Several lines:
+                    <tspan x="10" y="200">First line</tspan>
+                    <tspan x="10" y="220">Second line</tspan>
+                </text>
+
+                <a href="http://www.baidu.com" target="_blank">
+                    <text x="100" y="250" fill="red">I love SVG</text>
+                </a>
+            </svg>
+        </div>
+    </fieldset>
+
+</fieldset>
+
+<fieldset class="capture">
+    <legend>Stroke</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <svg width="200" height="200">
+                    <path d="M10 10 l 180 0" stroke="red" stroke-width="1" stroke-linecap="butt"
+                          stroke-dasharray="5,5"></path>
+                    <path d="M10 50 l 180 0" stroke="green" stroke-width="5" stroke-linecap="round"
+                          stroke-dasharray="10,10"></path>
+                    <path d="M10 100 l 180 0" stroke="blue" stroke-width="1" stroke-linecap="square"
+                          stroke-dasharray="20,10,5,5,5,10"></path>
+                </svg>
+            </xmp>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>运行效果</legend>
+        <div>
+            <svg width="200" height="200">
+                <path d="M10 10 l 180 0" stroke="red" stroke-width="1" stroke-linecap="butt"
+                      stroke-dasharray="5,5"></path>
+                <path d="M10 50 l 180 0" stroke="green" stroke-width="5" stroke-linecap="round"
+                      stroke-dasharray="10,10"></path>
+                <path d="M10 100 l 180 0" stroke="blue" stroke-width="1" stroke-linecap="square"
+                      stroke-dasharray="20,10,5,5,5,10"></path>
+            </svg>
+        </div>
+    </fieldset>
+
+</fieldset>
+<fieldset class="capture">
+    <legend>渐变-线性</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <svg width="200" height="200" style="background-color: beige;margin-left: 20px">
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y="0%">
+                            <stop offset="0%" style="stop-color: rgb(255,255,0); stop-opacity: 1"></stop>
+                            <stop offset="100%" style="stop-color: rgb(0,255,0); stop-opacity: 1"></stop>
+                        </linearGradient>
+                    </defs>
+                    <ellipse cx="100" cy="100" rx="50" ry="40" fill="url(#grad1)"></ellipse>
+                </svg>
+
+                <svg width="200" height="200" style="background-color: beige;margin-left: 20px">
+                    <defs>
+                        <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color: rgb(255,255,0); stop-opacity: 1"></stop>
+                            <stop offset="100%" style="stop-color: rgb(0,255,255); stop-opacity: 1"></stop>
+                        </linearGradient>
+                    </defs>
+                    <ellipse cx="100" cy="100" rx="50" ry="40" fill="url(#grad2)"></ellipse>
+                </svg>
+
+                <svg width="200" height="200" style="background-color: beige;margin-left: 20px">
+                    <defs>
+                        <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color: rgb(255,0,0); stop-opacity: 1"></stop>
+                            <stop offset="100%" style="stop-color: rgb(0,0,255); stop-opacity: 1"></stop>
+                        </linearGradient>
+                    </defs>
+                    <ellipse cx="100" cy="100" rx="50" ry="40" fill="url(#grad3)">
+                        <text fill="#ffffff" font-size="45" x="150" y="86">SVG</text>
+                    </ellipse>
+                </svg>
+
+
+            </xmp>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>运行效果</legend>
+        <div>
+            <svg width="200" height="200" style="background-color: beige;margin-left: 20px">
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y="0%">
+                        <stop offset="0%" style="stop-color: rgb(255,255,0); stop-opacity: 1"></stop>
+                        <stop offset="100%" style="stop-color: rgb(0,255,0); stop-opacity: 1"></stop>
+                    </linearGradient>
+                </defs>
+                <ellipse cx="100" cy="100" rx="50" ry="40" fill="url(#grad1)"></ellipse>
+            </svg>
+
+            <svg width="200" height="200" style="background-color: beige;margin-left: 20px">
+                <defs>
+                    <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color: rgb(255,255,0); stop-opacity: 1"></stop>
+                        <stop offset="100%" style="stop-color: rgb(0,255,255); stop-opacity: 1"></stop>
+                    </linearGradient>
+                </defs>
+                <ellipse cx="100" cy="100" rx="50" ry="40" fill="url(#grad2)"></ellipse>
+            </svg>
+
+            <svg width="200" height="200" style="background-color: beige;margin-left: 20px">
+                <defs>
+                    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color: rgb(255,0,0); stop-opacity: 1"></stop>
+                        <stop offset="100%" style="stop-color: rgb(0,0,255); stop-opacity: 1"></stop>
+                    </linearGradient>
+                </defs>
+                <ellipse cx="100" cy="100" rx="50" ry="40" fill="url(#grad3)">
+                    <text fill="#ffffff" font-size="45" x="150" y="86">SVG</text>
+                </ellipse>
+            </svg>
+
+
+        </div>
+    </fieldset>
+
+</fieldset>
+
+<fieldset class="capture">
+    <legend>渐变-放射</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <svg width="200" height="200" style="background-color: beige;margin-left: 20px">
+                    <defs>
+                        <radialGradient id="grad4" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                            <stop offset="0%" style="stop-color: rgb(255,0,0); stop-opacity: 1"></stop>
+                            <stop offset="100%" style="stop-color: rgb(0,255,0); stop-opacity: 1"></stop>
+                        </radialGradient>
+                    </defs>
+                    <ellipse cx="100" cy="100" rx="50" ry="40" fill="url(#grad4)"></ellipse>
+                </svg>
+
+                <svg width="200" height="200" style="background-color: beige;margin-left: 20px">
+                    <defs>
+                        <radialGradient id="grad5" cx="20%" cy="30%" r="80%" fx="50%" fy="50%">
+                            <stop offset="0%" style="stop-color: rgb(255,0,0); stop-opacity: 1"></stop>
+                            <stop offset="100%" style="stop-color: rgb(0,255,0); stop-opacity: 1"></stop>
+                        </radialGradient>
+                    </defs>
+                    <ellipse cx="100" cy="100" rx="50" ry="40" fill="url(#grad5)"></ellipse>
+                </svg>
+            </xmp>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>运行效果</legend>
+        <div>
+            <svg width="200" height="200" style="background-color: beige;margin-left: 20px">
+                <defs>
+                    <radialGradient id="grad4" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color: rgb(255,0,0); stop-opacity: 1"></stop>
+                        <stop offset="100%" style="stop-color: rgb(0,255,0); stop-opacity: 1"></stop>
+                    </radialGradient>
+                </defs>
+                <ellipse cx="100" cy="100" rx="50" ry="40" fill="url(#grad4)"></ellipse>
+            </svg>
+
+            <svg width="200" height="200" style="background-color: beige;margin-left: 20px">
+                <defs>
+                    <radialGradient id="grad5" cx="20%" cy="30%" r="80%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color: rgb(255,0,0); stop-opacity: 1"></stop>
+                        <stop offset="100%" style="stop-color: rgb(0,255,0); stop-opacity: 1"></stop>
+                    </radialGradient>
+                </defs>
+                <ellipse cx="100" cy="100" rx="50" ry="40" fill="url(#grad5)"></ellipse>
+            </svg>
+
+
+        </div>
+    </fieldset>
+
+</fieldset>
 </body>
 </html>
