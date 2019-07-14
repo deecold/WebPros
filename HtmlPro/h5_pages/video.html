@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../styles/beautiful.css">
+</head>
+<body>
+<fieldset class="capture">
+    <legend>排列图片</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <video width="320" height="240" controls>
+                    <source src="../resources/movie.mp4">
+                    您的浏览器不支持
+                </video>
+            </xmp>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>运行效果</legend>
+        <div>
+            <video id="v1" width="320" height="240" controls>
+                <source src="../resources/movie.mp4">
+                您的浏览器不支持
+            </video>
+            <button id="btn-play">播放</button>
+            <button id="btn-stop">暂停</button>
+            <button id="btn-big">放大</button>
+            <button id="btn-small">缩小</button>
+            <button id="btn-normal">正常</button>
+        </div>
+
+        <script>
+            var v = document.querySelector('#v1');
+            document.querySelector('#btn-play').addEventListener('click', () => {
+                if (v.paused) {
+                    v.play();
+                }
+            });
+            document.querySelector('#btn-stop').addEventListener('click', () => {
+                if (!v.paused) {
+                    v.pause();
+                }
+            });
+            document.querySelector('#btn-big').addEventListener('click', () => {
+                if (v) {
+                    v.width = 400;
+                }
+            });
+            document.querySelector('#btn-small').addEventListener('click', () => {
+                if (v) {
+                    v.width = 200;
+                }
+            });
+            document.querySelector('#btn-normal').addEventListener('click', () => {
+                if (v) {
+                    v.width = 320;
+                }
+            });
+
+
+        </script>
+
+    </fieldset>
+
+</fieldset>
+</body>
+</html>
