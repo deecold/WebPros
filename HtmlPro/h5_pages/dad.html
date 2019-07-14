@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽</title>
+    <link rel="stylesheet" href="../styles/beautiful.css">
+    <style>
+        .img-warp {
+            display: inline-block;
+            margin-right: 30px;
+            /*padding: 10px;*/
+            height: 150px;
+            width: 150px;
+            border: solid 1px orange;
+            border-radius: 5px;
+        }
+
+        .img-warp img {
+            width: 100%;
+            height: auto;
+            vertical-align: baseline;
+        }
+    </style>
+</head>
+<body>
+<fieldset class="capture">
+    <legend>拖拽</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <div>
+                    <div class="img-warp" id="c11" ondragover="dragover(event)" ondrop="drop(event)">
+                        <img src="../images/yyy.png" alt="" id="img11" draggable="true" ondragstart="dragstart(event)">
+                    </div>
+                    <div class="img-warp" id="c21" ondragover="dragover(event)" ondrop="drop(event)">
+                    </div>
+                </div>
+
+                <script>
+                    function dragover(event) {
+                        event.preventDefault();
+                    }
+
+                    function drop(event) {
+                        var img = document.getElementById(event.dataTransfer.getData('target'));
+                        event.target.appendChild(img);
+                        event.preventDefault();
+                    }
+
+                    function dragstart(event) {
+                        event.dataTransfer.setData("target", event.target.id);
+                    }
+                </script>
+            </xmp>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>运行效果</legend>
+        <div>
+            <div class="img-warp" id="c1" ondragover="dragover(event)" ondrop="drop(event)">
+                <img src="../images/yyy.png" alt="" id="img1" draggable="true" ondragstart="dragstart(event)">
+            </div>
+            <div class="img-warp" id="c2" ondragover="dragover(event)" ondrop="drop(event)">
+            </div>
+        </div>
+
+        <script>
+            function dragover(event) {
+                event.preventDefault();
+            }
+
+            function drop(event) {
+                var img = document.getElementById(event.dataTransfer.getData('target'));
+                event.target.appendChild(img);
+                event.preventDefault();
+            }
+
+            function dragstart(event) {
+                event.dataTransfer.setData("target", event.target.id);
+            }
+        </script>
+    </fieldset>
+
+</fieldset>
+</body>
+</html>
