@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../styles/beautiful.css">
+    <style>
+        textarea, input {
+            box-sizing: border-box;
+            padding: 5px 12px;
+            margin: 5px;
+            border: solid 1px black;
+            border-radius: 5px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+<fieldset class="capture">
+    <legend>Web-Socket</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+
+            </xmp>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>运行效果</legend>
+        <div>
+            <textarea name="txt-history" id="txt-history" cols="30" rows="10"></textarea>
+            <br>
+            <input type="text" id="txt-url">
+            <button id="btn-connect">连接</button>
+            <button id="btn-disconnect">断开</button>
+            <br>
+            <input type="text" id="txt-send">
+            <button id="btn-send">发送</button>
+        </div>
+        <script>
+            const txtHistory = document.querySelector('#txt-history');
+            const txtUrl = document.querySelector('#txt-url');
+            const txtSend = document.querySelector('#txt-send');
+
+            const btnConnect = document.querySelector('#btn-connect');
+            const btnDisConnect = document.querySelector('#btn-disconnect');
+            const btnSend = document.querySelector('#btn-send');
+
+
+            var url = 'ws://127.0.0.1:8002/info/';
+            var socket;
+
+            document.addEventListener('DOMContentLoaded', () => {
+                if (typeof (WebSocket) === 'undefined') {
+                    btnConnect.disabled = true;
+                    btnDisConnect.disabled = true;
+                    btnSend.disabled = true;
+
+                    txtHistory.readOnly = true;
+                    txtUrl.readOnly = true;
+                    txtSend.readOnly = true;
+                    alert('不支持WebSocket');
+                    return;
+                }
+                else {
+                    txtUrl.value = url;
+                    txtHistory.value = '';
+                    txtSend.value = '';
+                    btnConnect.addEventListener('click', () => {
+                        if (!socket && url) {
+                            socket = new WebSocket(url);
+                            socket.onopen = (evt) => {
+                                console.log(evt);
+                                console.log('打开成功');
+                            };
+                            socket.onclose = (evt) => {
+                                console.log(evt);
+                                console.log('关闭成功')
+                            }
+                            socket.onerror = (err) => {
+                                console.log(err);
+                                console.log('出现错误');
+                            }
+                            socket.onmessage = (msg) => {
+                                var history = txtHistory.value + "\r\n";
+                                var newHistory = history + msg.data;
+                                txtHistory.value = newHistory;
+                            }
+                        }
+                    });
+                    btnDisConnect.addEventListener('click', () => {
+                        if (socket && socket.readyState == 1) {
+                            socket.close();
+                            socket = undefined;
+                        }
+                    });
+                    btnSend.addEventListener('click', () => {
+                        var sendContent = txtSend.value;
+                        if (socket && socket.readyState == 1) {
+                            socket.send(sendContent);
+                        }
+                    });
+
+                }
+            });
+        </script>
+    </fieldset>
+
+</fieldset>
+</body>
+</html>
