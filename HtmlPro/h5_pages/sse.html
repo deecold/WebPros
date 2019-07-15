@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<fieldset class="capture">
+    <legend>SSE(Server-Send-Event)</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+
+            </xmp>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>运行效果</legend>
+        <div>
+            <p id="p-result"></p>
+            <button id="btn-accept">接受信息</button>
+            <button id="btn-stop-accept">停止接受信息</button>
+        </div>
+
+        <script>
+            const pResult = document.querySelector('#p-result');
+            const btnAccept = document.querySelector('#btn-accept');
+            const btnStopAccept = document.querySelector('#btn-stop-accept');
+
+            var sse;
+            document.addEventListener('DOMContentLoaded', () => {
+                if (typeof (EventSource) === 'undefined') {
+                    pResult.textContent = '浏览器不支持EventSource';
+                    btnAccept.disabled = true;
+                    btnStopAccept.disabled = true;
+                    return;
+                }
+                else {
+                    btnAccept.addEventListener('click', () => {
+                        console.log('into');
+                        if (typeof (sse) === 'undefined') {
+                            sse = new EventSource('http://127.0.0.1:8081/timer/');
+                            sse.onmessage = (evt) => {
+                                pResult.textContent = '当前时间:' + evt.data;
+                                console.log(evt.lastEventId);
+                                console.log(evt.origin);
+                            };
+                            sse.onerror = (err) => {
+                                console.log(err);
+                            };
+                            sse.onopen = (evt) => {
+                                console.log(evt);
+                                console.log('打开成功!!!');
+                            };
+                            sse.addEventListener('foo', (evt) => {
+                                console.log(evt.data);
+                            }, false);
+
+                        }
+                    });
+                    btnStopAccept.addEventListener('click', () => {
+                        if (sse) {
+                            sse.close();
+                            sse = undefined;
+                        }
+                    });
+                }
+            });
+
+        </script>
+
+    </fieldset>
+
+</fieldset>
+</body>
+</html>
