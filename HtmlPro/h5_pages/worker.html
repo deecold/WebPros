@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../styles/beautiful.css">
+</head>
+<body>
+<fieldset class="capture">
+    <legend>WebWorker</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <div>
+                    <p id="p-result"></p>
+                    <button id="btn-start">开始计时</button>
+                    <button id="btn-end">结束计时</button>
+                </div>
+                <script>
+                    var worker;
+                    const pResult = document.querySelector('#p-result');
+                    const btnStart = document.querySelector('#btn-start');
+                    const btnEnd = document.querySelector('#btn-end');
+
+
+                    document.addEventListener('DOMContentLoaded', () => {
+
+                        if (typeof (Worker) === 'undefined') {
+                            pResult.textContent = '浏览器不支持WebWorker';
+                            btnStart.disabled = true;
+                            btnEnd.disabled = true;
+                            return;
+                        }
+                        else {
+                            btnStart.addEventListener('click', () => {
+                                if (typeof (worker) == 'undefined') {
+                                    worker = new Worker('worker.js');
+                                    worker.onmessage = function (msg) {
+                                        pResult.textContent = "当前时间:" + msg.data;
+                                    };
+                                }
+                            });
+                            btnEnd.addEventListener('click', () => {
+                                if (worker) {
+                                    worker.terminate();
+                                    worker = undefined;
+                                }
+                            });
+                        }
+                    });
+
+                </script>
+            </xmp>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>运行效果</legend>
+        <div>
+            <p id="p-result"></p>
+            <button id="btn-start">开始计时</button>
+            <button id="btn-end">结束计时</button>
+        </div>
+        <script>
+            var worker;
+            const pResult = document.querySelector('#p-result');
+            const btnStart = document.querySelector('#btn-start');
+            const btnEnd = document.querySelector('#btn-end');
+
+
+            document.addEventListener('DOMContentLoaded', () => {
+
+                if (typeof (Worker) === 'undefined') {
+                    pResult.textContent = '浏览器不支持WebWorker';
+                    btnStart.disabled = true;
+                    btnEnd.disabled = true;
+                    return;
+                }
+                else {
+                    btnStart.addEventListener('click', () => {
+                        if (typeof (worker) == 'undefined') {
+                            worker = new Worker('worker.js');
+                            worker.onmessage = function (msg) {
+                                pResult.textContent = "当前时间:" + msg.data;
+                            };
+                        }
+                    });
+                    btnEnd.addEventListener('click', () => {
+                        if (worker) {
+                            worker.terminate();
+                            worker = undefined;
+                        }
+                    });
+                }
+            });
+
+        </script>
+    </fieldset>
+
+</fieldset>
+</body>
+</html>
