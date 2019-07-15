@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .process-bar {
+            height: 30px;
+            border-radius: 15px;
+            background: #e9e5e2;
+            background-image: linear-gradient(top, #e1ddd9, #e9e5e2);
+            -webkit-box-shadow: inset 0px 1px 0px #bebbb9, 0 1px 0 #fcfcfc;
+            -moz-box-shadow: inset 0px 1px 0px #bebbb9, 0 1px 0 #fcfcfc;
+            box-shadow: inset 0px 1px 0px #bebbb9, 0 1px 0 #fcfcfc;
+        }
+
+        .processor {
+            height: 29px;
+            margin: 1px 2px;
+            border-radius: 14px;
+            -webkit-box-shadow: inset 0px 1px 0px #fcfcfc, 0 1px 0 #bebbb9;
+            -moz-box-shadow: inset 0px 1px 0px #fcfcfc, 0 1px 0 #bebbb9;
+            box-shadow: inset 0px 1px 0px #fcfcfc, 0 1px 0 #bebbb9;
+        }
+
+        .html {
+            width: 100%;
+            background-color: #f674a4;
+            background-image: linear-gradient(top, #f674a4, #e06995);
+            -webkit-animation: html ease 2s;
+            -o-animation: html ease 2s;
+            animation: html ease 2s;
+        }
+
+        @keyframes html {
+            from {
+                width: 0%;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        .css {
+            width: 90%;
+            background-color: yellowgreen;
+            background-image: linear-gradient(top, yellow, yellowgreen);
+            -webkit-animation: css 2s ease;
+            -o-animation: css 2s ease;
+            animation: css 2s ease;
+        }
+
+        @keyframes css {
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 90%;
+            }
+        }
+
+        .js {
+            width: 70%;
+            /*background-color: steelblue;*/
+
+            background-image: -webkit-linear-gradient(left, skyblue, blue);
+            background-image: -moz-linear-gradient(left, skyblue, blue);
+            background-image: -ms-linear-gradient(left, skyblue, blue);
+            background-image: -o-linear-gradient(left, skyblue, blue);
+            background-image: linear-gradient(left, skyblue, blue);
+            -webkit-animation: js 2s ease;
+            -o-animation: js 2s ease;
+            animation: js 2s ease;
+        }
+
+        @keyframes js {
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 70%;
+            }
+        }
+
+        .java {
+            width: 50%;
+            /*background-color: steelblue;*/
+
+            background-image: -webkit-linear-gradient(left, lightseagreen, green);
+            background-image: -moz-linear-gradient(left, lightseagreen, green);
+            background-image: -ms-linear-gradient(left, lightseagreen, green);
+            background-image: -o-linear-gradient(left, lightseagreen, green);
+            background-image: linear-gradient(left, lightseagreen, green);
+            -webkit-animation: java 2s ease;
+            -o-animation: java 2s ease;
+            animation: java 2s ease;
+        }
+
+        @keyframes java {
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 50%;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="out-container">
+    <ul>
+        <li>
+            <h4>Graphic Design</h4>
+            <div class="process-bar">
+                <div class="processor html"></div>
+            </div>
+        </li>
+        <li>
+            <h4>CSS</h4>
+            <div class="process-bar">
+                <div class="processor css"></div>
+            </div>
+        </li>
+        <li>
+            <h4>JAVASCRIPT</h4>
+            <div class="process-bar">
+                <div class="processor js"></div>
+            </div>
+        </li>
+        <li>
+            <h4>JAVA</h4>
+            <div class="process-bar">
+                <div class="processor java"></div>
+            </div>
+        </li>
+
+
+    </ul>
+</div>
+</body>
+</html>
