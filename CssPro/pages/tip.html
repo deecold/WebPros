@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        .tip-container {
+            position: relative;
+            margin: 100px auto;
+            padding-bottom: 2px;
+            border-bottom: dashed 1px black;
+            width: 120px;
+        }
+
+        .tip-content {
+            position: absolute;
+            width: 100px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            color: white;
+            background-color: black;
+            border-radius: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -150%;
+            /*display: none;*/
+            opacity: 0;
+            transition: opacity ease .5s;
+        }
+
+        .tip-content:after {
+            content: '';
+            position: absolute;
+            border: solid black;
+            border-color: black transparent transparent transparent;
+            left: 50%;
+            top: 100%;
+            transform: translateX(-5px);
+        }
+
+        .tip-container:hover .tip-content {
+            /*display: block;*/
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+<div class="out-container">
+    <div class="tip-container">
+        鼠标移动到这里
+        <div class="tip-content">
+            提示文本
+        </div>
+    </div>
+</div>
+</body>
+</html>
