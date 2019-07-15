@@ -29,7 +29,7 @@
         .page li a {
             display: block;
             float: left;
-            padding: 12px 12px;
+            padding: 5px 12px;
             text-decoration: none;
 
         }
@@ -77,6 +77,151 @@
             color: whitesmoke;
             background-color: #e06995;
         }
+
+        .modal3 li a {
+            margin-left: 3px;
+            color: white;
+            background-color: transparent;
+        }
+
+        .modal3 li a.active {
+            border-radius: 50%;
+            background-color: green;
+        }
+
+        .modal3 li a:hover {
+            border-radius: 50%;
+            background-color: green;
+        }
+
+        .modal4 li a {
+            margin-left: 5px;
+            border-radius: 100%;
+            background-color: orange;
+        }
+
+        .modal4 li a.active, .modal4 li a:hover {
+            background-color: coral;
+        }
+
+        .modal4 .prev {
+            width: 80px;
+            text-align: center;
+            border-radius: 50% 0 0 50%;
+        }
+
+        .modal4 .next {
+            width: 80px;
+            text-align: center;
+            border-radius: 0 50% 50% 0;
+        }
+
+        .modal5 {
+            position: relative;
+        }
+
+        .modal5:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 35px;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 40%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0.65) 60%, rgba(0, 0, 0, 0) 100%);
+            background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 40%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0.65) 60%, rgba(0, 0, 0, 0) 100%);
+
+        }
+
+        .modal5 li a {
+            padding: 13px 5px 5px;
+            margin: 0 10px;
+            position: relative;
+        }
+
+        .modal5 li a:hover {
+            color: white;
+            background-color: transparent;
+        }
+
+        .modal5 li a:hover:after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background: #1E7EE2;
+            -moz-border-radius: 100%;
+            -webkit-border-radius: 100%;
+            border-radius: 100%;
+            z-index: -1;
+            left: -3px;
+            bottom: 4px;
+            margin: auto;
+        }
+
+        .modal5 a.active {
+            background: #1E7EE2;
+            color: #fff;
+        }
+
+        .modal5 a.active:hover {
+            background: #1E7EE2;
+        }
+
+        .modal5 a.active:before {
+            content: '';
+            position: absolute;
+            top: -11px;
+            left: -10px;
+            width: 18px;
+            border: 10px solid transparent;
+            border-bottom: 7px solid #104477;
+            z-index: -1;
+        }
+
+        .modal5 a.active:hover:after {
+            display: none;
+        }
+
+        .modal6 li a {
+            background-color: white;
+            border-right: solid 1px grey;
+        }
+
+        .modal6 .next {
+            position: relative;
+            border-radius: 0 50% 50% 0;
+        }
+
+        .modal6 .prev {
+            position: relative;
+            border-radius: 50% 0 0 50%;
+        }
+
+        .modal6 .prev:after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 100%;
+            top: 0;
+            right: 0;
+            background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+            background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+        }
+
+        .modal6 .next:after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-image: -moz-linear-gradient(right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+            background-image: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+
+        }
     </style>
 </head>
 <body>
@@ -101,6 +246,53 @@
             <li><a>4</a></li>
             <li><a>5</a></li>
             <li><a>&rAarr;</a></li>
+        </ul>
+    </div>
+
+    <div class="page-container">
+        <ul class="page modal3">
+            <li><a>&lAarr;</a></li>
+            <li><a>1</a></li>
+            <li><a>2</a></li>
+            <li><a class="active">3</a></li>
+            <li><a>4</a></li>
+            <li><a>5</a></li>
+            <li><a>&rAarr;</a></li>
+        </ul>
+    </div>
+
+    <div class="page-container">
+        <ul class="page modal4">
+            <li><a class="prev">&lAarr;上一页</a></li>
+            <li><a>1</a></li>
+            <li><a>2</a></li>
+            <li><a class="active">3</a></li>
+            <li><a>4</a></li>
+            <li><a>5</a></li>
+            <li><a class="next">下一页&rAarr;</a></li>
+        </ul>
+    </div>
+
+    <div class="page-container">
+        <ul class="page modal5">
+            <li><a class="prev">&lAarr;</a></li>
+            <li><a>1</a></li>
+            <li><a>2</a></li>
+            <li><a class="active">3</a></li>
+            <li><a>4</a></li>
+            <li><a>5</a></li>
+            <li><a class="next">&rAarr;</a></li>
+        </ul>
+    </div>
+    <div class="page-container">
+        <ul class="page modal6">
+            <li><a class="prev">&lAarr;</a></li>
+            <li><a>1</a></li>
+            <li><a>2</a></li>
+            <li><a class="active">3</a></li>
+            <li><a>4</a></li>
+            <li><a>5</a></li>
+            <li><a class="next">&rAarr;</a></li>
         </ul>
     </div>
 
