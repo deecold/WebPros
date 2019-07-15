@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        .page-container {
+            position: relative;
+        }
+
+        .page {
+            list-style-type: none;
+            margin: 0 auto 50px;
+            padding: 0;
+            overflow: auto;
+            display: flex;
+            display: -ms-flex;
+            justify-content: center;
+
+        }
+
+        .page li {
+            display: inline-block;
+            float: left;
+
+        }
+
+        .page li a {
+            display: block;
+            float: left;
+            padding: 12px 12px;
+            text-decoration: none;
+
+        }
+
+        .page li a:hover {
+            color: blue;
+            background-color: #fcfcfc;
+        }
+
+        .modal1 li a {
+            color: black;
+            background-color: whitesmoke;
+            border-right: solid 1px gray;
+        }
+
+        .modal1 li:last-child a {
+            border-right: none;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .modal1 li:first-child a {
+            border-radius: 5px 0 0 5px;
+        }
+
+        .modal1 li a.active {
+            color: whitesmoke;
+            background-color: blue;
+        }
+
+        .modal2 li a {
+            color: white;
+            background-color: darkgrey;
+            border-right: solid 1px GrayText;
+        }
+
+        .modal2 li:first-child a {
+            border-radius: 50% 0 0 50%;
+        }
+
+        .modal2 li:last-child a {
+            border-radius: 0 50% 50% 0;
+        }
+
+        .modal2 li a.active {
+            color: whitesmoke;
+            background-color: #e06995;
+        }
+    </style>
+</head>
+<body>
+<div class="out-container">
+    <div class="page-container">
+        <ul class="page modal1">
+            <li><a>&lAarr;</a></li>
+            <li><a>1</a></li>
+            <li><a>2</a></li>
+            <li><a class="active">3</a></li>
+            <li><a>4</a></li>
+            <li><a>5</a></li>
+            <li><a>&rAarr;</a></li>
+        </ul>
+    </div>
+    <div class="page-container">
+        <ul class="page modal2">
+            <li><a>&lAarr;</a></li>
+            <li><a>1</a></li>
+            <li><a>2</a></li>
+            <li><a class="active">3</a></li>
+            <li><a>4</a></li>
+            <li><a>5</a></li>
+            <li><a>&rAarr;</a></li>
+        </ul>
+    </div>
+
+
+</div>
+</body>
+</html>
