@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .process-bar {
+            height: 40px;
+            line-height: 40px;
+            background-color: lightgray;
+        }
+
+        .processor {
+            color: white;
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        .html {
+            width: 90%;
+            background-color: red;
+        }
+
+        .css {
+            width: 80%;
+            background-color: orange;
+        }
+
+        .js {
+            width: 70%;
+            background-color: brown;
+        }
+
+        .java {
+            width: 50%;
+            background-color: steelblue;
+        }
+    </style>
+</head>
+<body>
+<div class="out-container">
+    <ul>
+        <li>
+            <h3>HTML</h3>
+            <div class="process-bar">
+                <div class="processor html">
+                    HTML-90%
+                </div>
+            </div>
+        </li>
+        <li>
+            <h3>CSS</h3>
+            <div class="process-bar">
+                <div class="processor css">
+                    CSS-80%
+                </div>
+            </div>
+        </li>
+        <li>
+            <h3>JS</h3>
+            <div class="process-bar">
+                <div class="processor js">
+                    JS-70%
+                </div>
+            </div>
+        </li>
+        <li>
+            <h3>JAVA</h3>
+            <div class="process-bar">
+                <div class="processor java">
+                    JAVA-50%
+                </div>
+            </div>
+        </li>
+
+    </ul>
+</div>
+</body>
+</html>
