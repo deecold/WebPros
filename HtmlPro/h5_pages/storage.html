@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>存储</title>
+    <link rel="stylesheet" href="../styles/beautiful.css">
+</head>
+<body>
+<fieldset class="capture">
+    <legend>session-storage</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <div>
+                    <ul id="ul-session"></ul>
+                    <label for="session-name">填写session-name</label>
+                    <input type="text" id="session-name">
+                    <br>
+                    <label for="session-value">填写session-value</label>
+                    <input type="text" id="session-value">
+                    <br>
+                    <input type="button" id="btn-session-add" value="新增">
+                    <input type="button" id="btn-session-remove" value="删除">
+                    <input type="button" id="btn-session-update" value="更新">
+                    <input type="button" id="btn-session-query" value="查找">
+                    <input type="button" id="btn-session-clear" value="清空">
+                </div>
+                <script>
+                    const ulSession = document.querySelector('#ul-session');
+                    const txtSessionName = document.querySelector('#session-name');
+                    const txtSessionValue = document.querySelector('#session-value');
+
+                    document.querySelector("#btn-session-add").addEventListener('click', addSession);
+                    document.querySelector("#btn-session-remove").addEventListener('click', removeSession);
+                    document.querySelector("#btn-session-update").addEventListener('click', updateSession);
+                    document.querySelector("#btn-session-query").addEventListener('click', querySession);
+                    document.querySelector("#btn-session-clear").addEventListener('click', clearSession);
+
+                    function reflushSessions() {
+                        ulSession.innerHTML = '';
+                        var len = sessionStorage.length;
+                        for (var index = 0; index < len; index++) {
+                            var sessionName = sessionStorage.key(index);
+                            var sessionValue = sessionStorage.getItem(sessionName);
+                            var li = document.createElement('li');
+                            li.innerText = sessionName + ":" + sessionValue;
+                            ulSession.appendChild(li);
+                        }
+                    }
+
+                    function addSession() {
+                        var txtSessionName_value = txtSessionName.value;
+                        var txtSessionValue_value = txtSessionValue.value;
+                        if (!txtSessionName_value || !txtSessionValue_value) {
+                            return;
+                        }
+                        sessionStorage.setItem(txtSessionName_value, txtSessionValue_value);
+                        reflushSessions();
+                    }
+
+                    function removeSession() {
+                        var txtSessionName_value = txtSessionName.value;
+                        if (!txtSessionName_value) return;
+                        sessionStorage.removeItem(txtSessionName_value);
+                        reflushSessions();
+                    }
+
+                    function updateSession() {
+                        addSession();
+                    }
+
+                    function querySession() {
+                        var txtSessionName_value = txtSessionName.value;
+                        if (!txtSessionName_value) return;
+                        var txtSessionValue_value = sessionStorage.getItem(txtSessionName_value);
+                        txtSessionValue.value = txtSessionValue_value;
+                    }
+
+                    function clearSession() {
+                        sessionStorage.clear();
+                        reflushSessions();
+                    }
+
+                </script>
+            </xmp>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>运行效果</legend>
+        <div>
+            <ul id="ul-session"></ul>
+            <label for="session-name">填写session-name</label>
+            <input type="text" id="session-name">
+            <br>
+            <label for="session-value">填写session-value</label>
+            <input type="text" id="session-value">
+            <br>
+            <input type="button" id="btn-session-add" value="新增">
+            <input type="button" id="btn-session-remove" value="删除">
+            <input type="button" id="btn-session-update" value="更新">
+            <input type="button" id="btn-session-query" value="查找">
+            <input type="button" id="btn-session-clear" value="清空">
+        </div>
+        <script>
+            const ulSession = document.querySelector('#ul-session');
+            const txtSessionName = document.querySelector('#session-name');
+            const txtSessionValue = document.querySelector('#session-value');
+
+            document.querySelector("#btn-session-add").addEventListener('click', addSession);
+            document.querySelector("#btn-session-remove").addEventListener('click', removeSession);
+            document.querySelector("#btn-session-update").addEventListener('click', updateSession);
+            document.querySelector("#btn-session-query").addEventListener('click', querySession);
+            document.querySelector("#btn-session-clear").addEventListener('click', clearSession);
+
+            function reflushSessions() {
+                ulSession.innerHTML = '';
+                var len = sessionStorage.length;
+                for (var index = 0; index < len; index++) {
+                    var sessionName = sessionStorage.key(index);
+                    var sessionValue = sessionStorage.getItem(sessionName);
+                    var li = document.createElement('li');
+                    li.innerText = sessionName + ":" + sessionValue;
+                    ulSession.appendChild(li);
+                }
+            }
+
+            function addSession() {
+                var txtSessionName_value = txtSessionName.value;
+                var txtSessionValue_value = txtSessionValue.value;
+                if (!txtSessionName_value || !txtSessionValue_value) {
+                    return;
+                }
+                sessionStorage.setItem(txtSessionName_value, txtSessionValue_value);
+                reflushSessions();
+            }
+
+            function removeSession() {
+                var txtSessionName_value = txtSessionName.value;
+                if (!txtSessionName_value) return;
+                sessionStorage.removeItem(txtSessionName_value);
+                reflushSessions();
+            }
+
+            function updateSession() {
+                addSession();
+            }
+
+            function querySession() {
+                var txtSessionName_value = txtSessionName.value;
+                if (!txtSessionName_value) return;
+                var txtSessionValue_value = sessionStorage.getItem(txtSessionName_value);
+                txtSessionValue.value = txtSessionValue_value;
+            }
+
+            function clearSession() {
+                sessionStorage.clear();
+                reflushSessions();
+            }
+
+        </script>
+    </fieldset>
+
+</fieldset>
+
+<fieldset class="capture">
+    <legend>local-存储</legend>
+    <fieldset>
+        <legend>代码</legend>
+        <div class="code">
+            <xmp>
+                <div>
+                    <ul id="ul-local"></ul>
+
+                    <label for="local-name">local-name:</label>
+                    <input type="text" id="local-name">
+                    <br>
+
+                    <label for="local-value">local-value:</label>
+                    <input type="text" id="local-value">
+                    <br>
+
+                    <input type="button" id="btn-local-add" value="新增">
+                    <input type="button" id="btn-local-remove" value="删除">
+                    <input type="button" id="btn-local-update" value="更新">
+                    <input type="button" id="btn-local-query" value="查找">
+                    <input type="button" id="btn-local-clear" value="清空">
+                </div>
+
+                <script>
+
+                    const ulLocal = document.querySelector('#ul-local');
+                    const txtLocalName = document.querySelector('#local-name');
+                    const txtLocalValue = document.querySelector('#local-value');
+
+
+                    document.querySelector('#btn-local-add').addEventListener('click', addLocal);
+                    document.querySelector('#btn-local-remove').addEventListener('click', removeLocal);
+                    document.querySelector('#btn-local-update').addEventListener('click', updateLocal);
+                    document.querySelector('#btn-local-query').addEventListener('click', queryLocal);
+                    document.querySelector('#btn-local-clear').addEventListener('click', clearLocal);
+
+                    function reflushLocal() {
+                        ulLocal.innerHTML = '';
+                        var len = localStorage.length;
+                        for (var index = 0; index < len; index++) {
+                            var localName = localStorage.key(index);
+                            var localValue = localStorage.getItem(localName);
+                            var li = document.createElement('li');
+                            li.innerText = localName + ":" + localValue;
+                            ulLocal.appendChild(li);
+                        }
+                    }
+
+                    function addLocal() {
+                        var localName_value = txtLocalName.value;
+                        var localValue_value = txtLocalValue.value;
+                        if (!localName_value || !localValue_value) return;
+                        localStorage.setItem(localName_value, localValue_value);
+                        reflushLocal();
+                    }
+
+                    function removeLocal() {
+                        var localName_value = txtLocalName.value;
+                        if (!localName_value) return;
+                        localStorage.removeItem(localName_value);
+                        reflushLocal();
+                    }
+
+                    function updateLocal() {
+                        addLocal();
+                    }
+
+                    function queryLocal() {
+                        var localName_value = txtLocalName.value;
+                        if (!localName_value) return;
+                        var localValue_value = localStorage.getItem(localName_value);
+                        txtLocalValue.value = localValue_value;
+                    }
+
+                    function clearLocal() {
+                        localStorage.clear();
+                        reflushLocal();
+                    }
+
+                </script>
+
+            </xmp>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>运行效果</legend>
+        <div>
+            <ul id="ul-local"></ul>
+
+            <label for="local-name">local-name:</label>
+            <input type="text" id="local-name">
+            <br>
+
+            <label for="local-value">local-value:</label>
+            <input type="text" id="local-value">
+            <br>
+
+            <input type="button" id="btn-local-add" value="新增">
+            <input type="button" id="btn-local-remove" value="删除">
+            <input type="button" id="btn-local-update" value="更新">
+            <input type="button" id="btn-local-query" value="查找">
+            <input type="button" id="btn-local-clear" value="清空">
+        </div>
+
+        <script>
+
+            const ulLocal = document.querySelector('#ul-local');
+            const txtLocalName = document.querySelector('#local-name');
+            const txtLocalValue = document.querySelector('#local-value');
+
+
+            document.querySelector('#btn-local-add').addEventListener('click', addLocal);
+            document.querySelector('#btn-local-remove').addEventListener('click', removeLocal);
+            document.querySelector('#btn-local-update').addEventListener('click', updateLocal);
+            document.querySelector('#btn-local-query').addEventListener('click', queryLocal);
+            document.querySelector('#btn-local-clear').addEventListener('click', clearLocal);
+
+            function reflushLocal() {
+                ulLocal.innerHTML = '';
+                var len = localStorage.length;
+                for (var index = 0; index < len; index++) {
+                    var localName = localStorage.key(index);
+                    var localValue = localStorage.getItem(localName);
+                    var li = document.createElement('li');
+                    li.innerText = localName + ":" + localValue;
+                    ulLocal.appendChild(li);
+                }
+            }
+
+            function addLocal() {
+                var localName_value = txtLocalName.value;
+                var localValue_value = txtLocalValue.value;
+                if (!localName_value || !localValue_value) return;
+                localStorage.setItem(localName_value, localValue_value);
+                reflushLocal();
+            }
+
+            function removeLocal() {
+                var localName_value = txtLocalName.value;
+                if (!localName_value) return;
+                localStorage.removeItem(localName_value);
+                reflushLocal();
+            }
+
+            function updateLocal() {
+                addLocal();
+            }
+
+            function queryLocal() {
+                var localName_value = txtLocalName.value;
+                if (!localName_value) return;
+                var localValue_value = localStorage.getItem(localName_value);
+                txtLocalValue.value = localValue_value;
+            }
+
+            function clearLocal() {
+                localStorage.clear();
+                reflushLocal();
+            }
+
+        </script>
+
+    </fieldset>
+
+</fieldset>
+
+<script>
+    reflushLocal();
+    reflushSessions();
+</script>
+
+</body>
+</html>
