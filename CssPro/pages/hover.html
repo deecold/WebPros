@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+
+        .hover-container {
+            width: 300px;
+            height: 300px;
+            margin: 20px auto 50px;
+            border: solid 1px red;
+            position: relative;
+        }
+
+        .hover-container img {
+            width: 100%;
+        }
+
+        .text-warp {
+            width: 100%;
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
+            color: white;
+            background-color: blue;
+            position: absolute;
+            overflow: hidden;
+        }
+
+        .modal1 .text-warp {
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity ease .5s;
+        }
+
+        .modal1:hover .text-warp {
+            opacity: 1;
+        }
+
+        .modal2 .text-warp {
+            top: 0;
+            left: 0;
+            height: 0;
+            transition: height ease .5s;
+        }
+
+        .modal2:hover .text-warp {
+            height: 100%;
+        }
+
+        .modal3 .text-warp {
+            top: 0;
+            left: 0;
+            width: 0;
+            transition: width ease .5s;
+        }
+
+        .modal3:hover .text-warp {
+            width: 100%;
+        }
+
+        .modal4 .text-warp {
+            left: 0;
+            bottom: 0;
+            height: 0;
+            transition: height ease .5s;
+        }
+
+        .modal4:hover .text-warp {
+            height: 100%;
+        }
+
+        .modal5 .text-warp {
+            right: 0;
+            top: 0;
+            width: 0;
+            transition: width ease .5s;
+        }
+
+        .modal5:hover .text-warp {
+            width: 100%;
+        }
+
+        .modal6 .text-warp {
+            left: 0;
+            top: 0;
+            /*display: none;*/
+            opacity: 0;
+            transform: scale(0) rotate(0deg);
+            transition: ease .5s;
+        }
+
+        .modal6:hover .text-warp {
+
+            transform: scale(1) rotate(360deg);
+            opacity: 1;
+            /*display: block;*/
+            /*-webkit-animation: scale ease .5s;*/
+            /*-o-animation: scale ease .5s;*/
+            /*animation: scale ease .5s;*/
+
+        }
+
+        @keyframes scale {
+            from {
+                transform: rotate(0deg) scale(0);
+            }
+            to {
+                transform: rotate(360deg) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="out-container">
+    <div class="hover-container modal1">
+        <img src="../images/yyy.png" alt="阴阳鱼">
+        <div class="text-warp">
+            Hello World
+        </div>
+    </div>
+    <div class="hover-container modal2">
+        <img src="../images/yyy.png" alt="阴阳鱼">
+        <div class="text-warp">
+            Hello World
+        </div>
+    </div>
+
+    <div class="hover-container modal3">
+        <img src="../images/yyy.png" alt="阴阳鱼">
+        <div class="text-warp">
+            Hello World
+        </div>
+    </div>
+
+    <div class="hover-container modal4">
+        <img src="../images/yyy.png" alt="阴阳鱼">
+        <div class="text-warp">
+            Hello World
+        </div>
+    </div>
+
+    <div class="hover-container modal5">
+        <img src="../images/yyy.png" alt="阴阳鱼">
+        <div class="text-warp">
+            Hello World
+        </div>
+    </div>
+
+    <div class="hover-container modal6">
+        <img src="../images/yyy.png" alt="阴阳鱼">
+        <div class="text-warp">
+            Hello World
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>
