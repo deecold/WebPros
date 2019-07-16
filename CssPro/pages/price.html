@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta name="viewpoint" content="width=device-width" ,initial-scale="1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .price-container {
+            /*display: flex;*/
+            /*display: -ms-flex;*/
+            /*justify-content: center;*/
+            overflow: auto;
+        }
+
+        .price-card {
+            /*box-sizing: border-box;*/
+            /*width: 180px;*/
+            /*padding: 10px;*/
+            /*display: inline-block;*/
+
+            float: left;
+            width: 33.33%;
+            padding: 8px;
+
+        }
+
+        .price-card ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            background-color: whitesmoke;
+            transition: .3s;
+        }
+
+        .price-card ul:hover {
+            -webkit-box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.2);;
+            box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.2);;
+        }
+
+        .price-card ul li {
+            border: solid 1px grey;
+            text-align: center;
+            font-size: 15px;
+            padding: 20px;
+        }
+
+        .price-card ul li:not(:first-child) {
+            border-top: none;
+        }
+
+        .basic {
+            color: white;
+            background-color: black;
+        }
+
+        .price-bg {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .signup-bg {
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .signup {
+            padding: 8px 12px;
+            text-align: center;
+            font-size: 18px;
+            color: white;
+            background-color: green;
+            border: none;
+        }
+
+        .pro {
+            color: white;
+            background-color: green;
+        }
+
+        .premium {
+            color: white;
+            background-color: black;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .price-card {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="out-container">
+    <div class="price-container">
+        <div class="price-card">
+            <ul>
+                <li class="basic">Basic</li>
+                <li class="price-bg">$9.99/Year</li>
+                <li>10GB Storage</li>
+                <li>10 Emails</li>
+                <li>10 Domains</li>
+                <li>10 Bandwidth</li>
+                <li class="signup-bg">
+                    <button class="signup">Sign Up</button>
+                </li>
+            </ul>
+        </div>
+        <div class="price-card">
+            <ul>
+                <li class="pro">Pro</li>
+                <li class="price-bg">$9.99/Year</li>
+                <li>10GB Storage</li>
+                <li>10 Emails</li>
+                <li>10 Domains</li>
+                <li>10 Bandwidth</li>
+                <li class="signup-bg">
+                    <button class="signup">Sign Up</button>
+                </li>
+            </ul>
+        </div>
+        <div class="price-card">
+            <ul>
+                <li class="premium">Premium</li>
+                <li class="price-bg">$9.99/Year</li>
+                <li>10GB Storage</li>
+                <li>10 Emails</li>
+                <li>10 Domains</li>
+                <li>10 Bandwidth</li>
+                <li class="signup-bg">
+                    <button class="signup">Sign Up</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
