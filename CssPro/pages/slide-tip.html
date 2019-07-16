@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>侧边标签</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        .tip-container {
+            position: relative;
+            overflow: auto;
+            height: 300px;
+        }
+
+        .content {
+            margin-left: 200px;
+        }
+
+        .tip {
+            position: absolute;
+            left: -120px;
+            padding: 6px 20px;
+            text-align: center;
+            color: white;
+            border-radius: 0 5px 5px 0;
+            width: 150px;
+            font-size: 30px;
+            transition: .4s linear;
+        }
+
+        .tip:hover {
+            left: 0;
+        }
+
+        .success {
+            top: 20px;
+            background-color: darkseagreen;
+        }
+
+        .info {
+            top: 80px;
+            background-color: dodgerblue;
+        }
+
+        .warning {
+            top: 140px;
+            background-color: palevioletred;
+        }
+
+        .error {
+            top: 200px;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+<div class="out-container">
+    <div class="tip-container">
+        <div class="content">
+            <h2>便签效果</h2>
+            <p>鼠标移动到指定标签显示隐藏内容</p>
+        </div>
+        <div class="tip success">About</div>
+        <div class="tip info">Blog</div>
+        <div class="tip warning">Projects</div>
+        <div class="tip error">Contact</div>
+    </div>
+</div>
+</body>
+</html>
