@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        .out-container {
+            overflow: auto;
+        }
+
+        .drop-container {
+            position: relative;
+            display: inline-block;
+
+        }
+
+        button {
+            border: none;
+            padding: 12px 20px;
+            text-align: center;
+            background-color: green;
+        }
+
+        .drop-container:hover .drop-bar {
+            display: block;
+        }
+
+        .drop-bar {
+            width: 120px;
+            display: none;
+            -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .drop-bar a {
+            display: block;
+            padding: 12px 16px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .drop-bar a:hover {
+            color: white;
+            background-color: #666666;
+        }
+
+        .right {
+            position: absolute;
+            right: 0;
+        }
+
+        .c1 {
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="out-container">
+    <div class="drop-container">
+        <button>下拉菜单</button>
+        <div class="drop-bar">
+            <a href="">下拉菜单</a>
+            <a href="">下拉菜单</a>
+            <a href="">下拉菜单</a>
+            <a href="">下拉菜单</a>
+            <a href="">下拉菜单</a>
+        </div>
+    </div>
+    <div class="drop-container" style="float: right">
+        <button>下拉菜单</button>
+        <div class="drop-bar">
+            <a href="">下拉菜单</a>
+            <a href="">下拉菜单</a>
+            <a href="">下拉菜单</a>
+            <a href="">下拉菜单</a>
+            <a href="">下拉菜单</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
