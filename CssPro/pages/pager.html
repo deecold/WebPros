@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+
+        .pager-container {
+            display: flex;
+            display: -ms-flex;
+            justify-content: center;
+        }
+
+        button {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 12px 20px;
+            font-size: 23px;
+            border: none;
+        }
+
+        button:hover {
+            background-color: darkgrey;
+        }
+
+        .next {
+            color: white;
+            background-color: green;
+        }
+
+        .round {
+            border-radius: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="out-container">
+    <div class="pager-container">
+        <button class="pager prev">&laquo;上一页</button>
+        <button class="pager next">下一页 &raquo;</button>
+
+        <button class="pager prev round"> &#8249;</button>
+        <button class="pager next round"> &#8250;</button>
+
+    </div>
+</div>
+</body>
+</html>
