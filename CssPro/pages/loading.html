@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        .loading-container {
+            width: 400px;
+            margin: 30px auto;
+            display: flex;
+            display: -ms-flex;
+            justify-content: center;
+        }
+
+        .load {
+
+            height: 100px;
+            width: 100px;
+            border: solid 10px;
+            outline: solid 1px hwb();
+            border-radius: 100%;
+            -webkit-animation: rorate linear 2s infinite;
+            -o-animation: rorate linear 2s infinite;
+            animation: rorate linear 2s infinite;
+        }
+
+        @keyframes rorate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .modal1 {
+            border-color: red grey grey grey;
+        }
+
+        .modal2 {
+            border-color: red grey red grey;
+        }
+
+        .modal3 {
+            border-color: red palegreen slateblue grey;
+        }
+
+        .modal4 {
+            border-color: red palegreen steelblue saddlebrown;
+        }
+    </style>
+</head>
+<body>
+<div class="out-container">
+    <div class="loading-container">
+        <div class="load modal1"></div>
+    </div>
+
+    <div class="loading-container">
+        <div class="load modal2"></div>
+    </div>
+
+    <div class="loading-container">
+        <div class="load modal3"></div>
+    </div>
+
+    <div class="loading-container">
+        <div class="load modal4"></div>
+    </div>
+
+
+</div>
+</body>
+</html>
