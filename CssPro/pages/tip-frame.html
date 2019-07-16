@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        .tip-container {
+            width: 300px;
+            margin: 50px auto;
+        }
+
+        .tip {
+            margin-bottom: 20px;
+            width: 100%;
+            height: 55px;
+            padding-left: 15px;
+            line-height: 55px;
+            border-left: solid 5px;
+        }
+
+        .danger {
+            background-color: #e06995;
+            border-left-color: red;
+        }
+
+        .success {
+            background-color: darkseagreen;
+            border-left-color: seagreen;
+        }
+
+        .info {
+            background-color: lightsteelblue;
+            border-left-color: dodgerblue;
+        }
+
+        .warning {
+            background-color: lightyellow;
+            border-left-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<div class="out-container">
+    <div class="tip-container">
+        <div class="tip danger"><b>Danger!</b>Some text...</div>
+        <div class="tip success"><b>Success!</b>Some text...</div>
+        <div class="tip info"><b>Info!</b>Some text...</div>
+        <div class="tip warning"><b>Warning!</b>Some text...</div>
+    </div>
+</div>
+</body>
+</html>
