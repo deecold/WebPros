@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>反馈表单</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        .form-container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input, select, textarea {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background-color: seagreen;
+
+        }
+
+        button:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<div class="out-container">
+    <div class="form-container">
+        <form action="">
+            <label for="user-name">联系人</label>
+            <input type="text" id="user-name" name="user-name" placeholder="请输入名称...">
+            <br>
+            <label for="user-email">邮箱</label>
+            <input type="email" id="user-email" name="user-email" placeholder="请输入邮箱...">
+            <br>
+            <label for="sel-city">城市</label>
+            <select name="sel-city" id="sel-city">
+                <option value="beijing" selected>北京</option>
+                <option value="tianjin">天津</option>
+                <option value="shanghai">上海</option>
+                <option value="chongqing">重庆</option>
+            </select>
+            <br>
+
+            <label for="txt-remark">反馈信息</label>
+            <textarea name="txt-remark" id="txt-remark" rows="10"></textarea>
+            <br>
+
+            <button>提交</button>
+
+
+        </form>
+    </div>
+</div>
+</body>
+</html>
