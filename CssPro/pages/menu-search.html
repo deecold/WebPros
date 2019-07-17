@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .menu-bar {
+            overflow: auto;
+            background-color: darkgray;
+        }
+
+        .menu-bar a {
+            display: block;
+            float: left;
+            padding: 14px 16px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 17px;
+            color: black;
+        }
+
+        .menu-bar a:hover {
+            color: black;
+            background-color: #dddddd;
+        }
+
+        .menu-bar a.active {
+            color: white;
+            background-color: #2196F3;
+        }
+
+        input {
+            float: right;
+            padding: 6px;
+            margin-top: 12px;
+            margin-right: 6px;
+            border: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            .menu-bar a, .menu-bar input {
+                float: none;
+                display: block;
+                text-align: left;
+                width: 100%;
+                margin: 0;
+                padding: 14px;
+            }
+
+            .menu-bar input {
+                border: solid 1px #cccccc;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<div class="out-container">
+    <div class="menu-bar">
+        <a href="" class="active">Home</a>
+        <a href="">关于</a>
+        <a href="">联系我们</a>
+        <input type="text" class="search" placeholder="search...">
+    </div>
+    <h3>响应式搜索菜单</h3>
+    <p>导航栏中又一个搜索框</p>
+    <p>调整浏览器窗口的大小，查看效果</p>
+</div>
+</body>
+</html>
