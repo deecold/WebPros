@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .menu-bar {
+            overflow: auto;
+            background-color: #000000;
+        }
+
+        .menu-bar a {
+            display: inline-block;
+            float: left;
+            padding: 12px 16px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        .menu-bar a:hover {
+            color: black;
+            background-color: #f1f1f1;
+        }
+
+        iframe {
+            width: 100%;
+            height: 800px;
+            margin-top: 10px;
+            border: groove 1px darkorange;
+        }
+
+    </style>
+</head>
+<body>
+<div class="menu-bar">
+    <a data-my-src="pages/basic.html">基本知识</a>
+    <a >函数</a>
+    <a >标准对象</a>
+    <a >面向对象编程</a>
+    <a >浏览器</a>
+    <a >jquery</a>
+    <a >错误处理</a>
+    <a >underscope</a>
+    <a >Node.js</a>
+</div>
+<div class="body">
+    <iframe id="frame" src="" frameborder="0" scrolling="scroll">
+
+    </iframe>
+</div>
+
+<script>
+    const frame = document.querySelector('#frame');
+    const links = document.querySelectorAll('a');
+    links.forEach(function (element) {
+        console.log(element);
+        element.addEventListener('click', () => {
+            console.log(this);
+            var target = element.dataset.mySrc;
+            frame.src = target;
+        });
+    });
+</script>
+
+</body>
+</html>
