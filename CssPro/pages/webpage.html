@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .header {
+            padding: 40px 0;
+            text-align: center;
+            color: white;
+            background-color: darkseagreen;
+        }
+
+        .nav-bar {
+            overflow: auto;
+            background-color: darkgray;
+        }
+
+        .nav-bar a {
+            display: inline-block;
+            padding: 12px 16px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 15px;
+            color: white;
+        }
+
+        .nav-bar a:hover {
+            color: white;
+            background-color: darkslategray;
+        }
+
+        .right {
+            float: right;
+            margin-right: 20px;
+        }
+
+        .body {
+            display: flex;
+            display: -ms-flex;
+            flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+        }
+
+        .body:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .slide {
+            flex: 30%;
+            -ms-flex: 30%;
+            padding: 30px;
+            background-color: #cccccc;
+
+        }
+
+        .content {
+            flex: 70%;
+            -ms-flex: 70%;
+            padding: 30px;
+            background-color: #f1f1f1;
+        }
+
+        .img {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: steelblue;
+        }
+
+        .footer {
+            padding: 50px;
+            text-align: center;
+            font-size: 20px;
+            color: white;
+            background-color: grey;
+        }
+
+        @media screen and (max-width: 600px) {
+            .body {
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .nav-bar a {
+                float: none;
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>DEE网页测试实例</h1>
+    <p>创建一个网页</p>
+</div>
+<div class="nav-bar">
+    <a href="">链接</a>
+    <a href="">链接</a>
+    <a href="">链接</a>
+    <a href="" class="right">链接</a>
+</div>
+<div class="body">
+    <div class="slide">
+        <h3>关于我</h3>
+        <p>我的照片</p>
+        <div class="img" style="height: 300px"></div>
+        <p>关于我的介绍</p>
+        <h3>更过内容</h3>
+        <p>我的更多内容</p>
+        <div class="img" style="height: 60px"></div>
+        <div class="img" style="height: 60px"></div>
+        <div class="img" style="height: 60px"></div>
+    </div>
+    <div class="content">
+        <h3>标题</h3>
+        <p>副标题</p>
+        <div class="img" style="height: 300px"></div>
+        <p>一些文本</p>
+        <p>菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！</p>
+        <h3>标题</h3>
+        <p>副标题</p>
+        <div class="img" style="height: 300px"></div>
+        <p>一些文本</p>
+        <p>菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！</p>
+    </div>
+</div>
+<div class="footer">
+    底部内容
+</div>
+</body>
+</html>
